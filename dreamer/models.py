@@ -52,7 +52,7 @@ class Dreamer(tools.Module):
                 print(f'[Info] Training for {n} steps.')
                 with self._strategy.scope():
                     for train_step in range(n):
-                        print(f'\t[Train Step] # {train_step}')
+                        # print(f'\t[Train Step] # {train_step}')
                         log_images = self._c.log_images and log and train_step == 0
                         self.train(next(self._dataset), log_images)
                 if log:

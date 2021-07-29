@@ -157,7 +157,7 @@ def create_log_dirs(config):
     params = f"Ar{config.action_repeat}_Bl{config.batch_length}_H{config.horizon}"
     suffix = f"{config.seed}_{time.time()}"
     # create log dirs
-    logdir = pathlib.Path(f'{config.logdir}/{prefix}_{model_archs}_{params}_{suffix}')
+    logdir = pathlib.Path(f'{config.logdir}/{prefix}_{model_archs}_{params}')
     datadir = logdir / 'episodes'                   # where storing the episodes as np files
     checkpoint_dir = logdir / 'checkpoints'         # where storing model checkpoints
     best_checkpoint_dir = checkpoint_dir / 'best'   # where storing the best model checkpoint
